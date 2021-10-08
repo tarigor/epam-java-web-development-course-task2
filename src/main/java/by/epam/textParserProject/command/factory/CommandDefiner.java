@@ -2,6 +2,7 @@ package by.epam.textParserProject.command.factory;
 
 import by.epam.textParserProject.command.Command;
 import by.epam.textParserProject.command.impl.ParseFromFile;
+import by.epam.textParserProject.command.impl.PrintOutFromCompositeObject;
 
 /**
  * Class provides a method for define a certain commands depending fro selected option in menu.
@@ -32,6 +33,7 @@ public class CommandDefiner {
             }
             case 2: {
                 System.out.println("Command 2 selected");
+                command = new PrintOutFromCompositeObject();
                 break;
             }
             default: {

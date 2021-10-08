@@ -3,6 +3,8 @@ package by.epam.textParserProject.service;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Objects;
 
@@ -39,6 +41,16 @@ public class TextFileService {
             e.printStackTrace();
         }
         return textInListLineByLine;
+    }
+
+    public String getTextFromFileToString() {
+        String fileContent = null;
+        try {
+            fileContent = Files.readString(Paths.get("src/main/resources/text.txt"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return fileContent;
     }
 
     public ArrayList<String> getTextInListLineByLine() {
