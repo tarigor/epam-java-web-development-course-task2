@@ -39,7 +39,7 @@ public class ParserService {
      * @return resulting Composite object consists whole text divided by paragraph,sentence,word,punctuation
      * based on Composite pattern.
      */
-    public Composite parseToParagraph(String text) {
+    public Composite parseTextFromFile(String text) {
         Matcher paragraphMatcher = doMatching(PARAGRAPH, text);
         int i = 1;
         while (paragraphMatcher.find()) {

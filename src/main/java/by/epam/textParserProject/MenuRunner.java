@@ -23,13 +23,13 @@ public class MenuRunner {
     /**
      * Methods provides continuous menu cycle dialog.
      */
-    public void doMenuCycle() {
-        while (true) {
-            menuService
-                    .storeMenuToMap()
-                    .printMenu()
-                    .doOptionSelection()
-                    .execute();
-        }
-    }
+//    public void doMenuCycle() {
+//        while (true) {
+//            menuService
+//                    .storeMenuToMap()
+//                    .printMenu()
+//                    .doOptionSelection()
+//                    .execute();
+//        }
+//    }
 }

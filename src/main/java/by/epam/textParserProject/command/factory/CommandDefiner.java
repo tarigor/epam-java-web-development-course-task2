@@ -1,5 +1,6 @@
 package by.epam.textParserProject.command.factory;
 
+import by.epam.textParserProject.command.Commands;
 import by.epam.textParserProject.command.Command;
 import by.epam.textParserProject.command.impl.ParseFromFile;
 import by.epam.textParserProject.command.impl.PrintOutFromCompositeObject;
@@ -21,18 +22,16 @@ public class CommandDefiner {
     /**
      * Method provides a selection of the command in depends of the selection made in a menu.
      *
-     * @param commandId command id
+     * @param commandName command id
      * @return instance of the certain command.
      */
-    public Command doCommand(int commandId) {
-        switch (commandId) {
-            case 1: {
-                System.out.println("Command 1 selected");
+    public Command selectCommand(Commands commandName) {
+        switch (commandName) {
+            case PARSE_FROM_FILE: {
                 command = new ParseFromFile();
                 break;
             }
-            case 2: {
-                System.out.println("Command 2 selected");
+            case PRINT_TEXT_FROM_OBJECT: {
                 command = new PrintOutFromCompositeObject();
                 break;
             }

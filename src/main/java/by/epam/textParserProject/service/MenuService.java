@@ -53,9 +53,9 @@ public class MenuService {
      *
      * @return instance of Command class provides a builder pattern.
      */
-    public Command doOptionSelection() {
-        System.out.print("Select an option:");
-        return CommandDefiner.getInstance().doCommand(scanner.nextInt());
-    }
+//    public Command doOptionSelection() {
+//        System.out.print("Select an option:");
+//        return CommandDefiner.getInstance().selectCommand(scanner.next());
+//    }
 
 }
