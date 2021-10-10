@@ -15,6 +15,7 @@ import java.util.List;
  */
 public class TextFileService {
     private String fileContent;
+    private final String PATH = System.getProperty("user.dir") + "/";
 
     public TextFileService() {
     }
@@ -30,7 +31,6 @@ public class TextFileService {
     public String uploadFile(HttpServletRequest request) {
         DiskFileItemFactory factory = new DiskFileItemFactory();
         ServletFileUpload fileUpload = new ServletFileUpload(factory);
-        String path = "/home/igor/Documents/project/epamJavaWebDevCourse/epam-java-web-development-course-task2/src/main/resources/";
         String fileName = "";
         String fileContent = "";
         try {
@@ -38,10 +38,9 @@ public class TextFileService {
             FileItem item = items.stream()
                     .filter(e -> "file".equals(e.getFieldName()))
                     .findFirst().get();
-//            item.write(new File(System.getProperty("user.dir"), fileName));
             fileName = item.getName();
-            item.write(new File(path, fileName));
-            fileContent = Files.readString(Paths.get(path + fileName));
+            item.write(new File(PATH, fileName));
+            fileContent = Files.readString(Paths.get(PATH + fileName));
         } catch (Exception e) {
             e.printStackTrace();
         }

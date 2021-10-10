@@ -10,6 +10,10 @@
 Использовать logging.
 Использовать библиотеки сборки.
 
+### Attachment
+
+File to be parsed is located in _`resources`_ folder -> text.txt
+
 #### Stack:
 - Java 11
 - maven (build tool)
