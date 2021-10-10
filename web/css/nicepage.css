@@ -20746,6 +20746,15 @@ p {
     position: relative;
 }
 
+.u-text-my {
+    overflow-x: auto;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+
 .u-word-break {
     word-break: break-all;
 }
@@ -40408,7 +40417,7 @@ a:hover {
 .u-gradient > .u-container-layout > .u-btn:focus,
 .u-image:not(.u-shading) > .u-container-layout > .u-btn:focus,
 .u-btn:focus {
-    background-color: #879795;
+    background-color: #387cbd;
     color: #e6e6e6;
 }
 
@@ -40416,8 +40425,8 @@ a:hover {
 .u-gradient > .u-container-layout > .u-btn:active,
 .u-image:not(.u-shading) > .u-container-layout > .u-btn:active,
 .u-btn:active {
-    /*background-color: #387cbd;*/
-    /*color: #e6e6e6;*/
+    background-color: #387cbd;
+    color: #e6e6e6;
 }
 
 .u-overlap.u-overlap-transparent:not(.u-overlap-contrast) .u-header :not(.u-nav-item) > blockquote,

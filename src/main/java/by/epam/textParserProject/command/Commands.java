@@ -1,5 +1,9 @@
 package by.epam.textParserProject.command;
 
 public enum Commands {
-    PARSE_FROM_FILE, PRINT_TEXT_FROM_OBJECT;
+    DOWNLOAD,
+    PARSE,
+    SHOW_CONTENT_OF_DOWNLOADED_FILE,
+    SHOW_ELEMENTS_DETECTED_WHILE_PARSING,
+    SHOW_PARSED_TEXT;
 }

@@ -45,18 +45,18 @@
 			Использовать библиотеки сборки.
 		</p>
 		<br>
-		<form method="POST" action="${pageContext.request.contextPath}/Controller" enctype="multipart/form-data" >
-			<input type="hidden" name="command" value="parse111"/>
+		<form method="POST" action="${pageContext.request.contextPath}/Controller" enctype="multipart/form-data">
 			<input type="file" name="file"/><br/>
-			<input type="submit" value="Parse"/>
+			<input class="u-btn u-button-style u-btn-1" type="submit" value="DOWNLOAD A FILE"/>
 		</form>
 	</div>
 </section>
 
 
 <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-dfcf">
-	<div class="u-clearfix u-sheet u-sheet-1">
-		<p class="u-small-text u-text u-text-variant u-text-1">Copyright &copy; 2021 Igor Taren - All Rights Reserved.</p>
+	<div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+		<p class="u-small-text u-text u-text-variant u-text-1">Copyright &copy; 2021 Igor Taren - All Rights
+			Reserved.</p>
 	</div>
 </footer>
 </body>

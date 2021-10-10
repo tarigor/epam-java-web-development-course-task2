@@ -16,6 +16,7 @@ public class Paragraph implements Component {
     @Override
     public void parse() {
         System.out.print(content + " ");
+        Composite.wholeParsedText = Composite.wholeParsedText + content + " ";
     }
 
     @Override
@@ -31,5 +32,10 @@ public class Paragraph implements Component {
     @Override
     public Component getChild(int index) {
         throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public String toString() {
+        return content + " ";
     }
 }

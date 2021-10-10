@@ -17,10 +17,15 @@ public class ParserService {
     private final String WORD = ParserExpression.WORD.getParseExpression();
     private final String PUNCTUATION = ParserExpression.PUNCTUATION.getParseExpression();
 
-    private final Composite paragraphComposite;
+    private Composite paragraphComposite;
+    private String textElementsWhileParsing = "";
 
     public ParserService() {
         paragraphComposite = new Composite();
+    }
+
+    public String getTextElementsWhileParsing() {
+        return textElementsWhileParsing;
     }
 
     public Composite getParagraphComposite() {
@@ -46,11 +51,14 @@ public class ParserService {
             String singleParagraph = paragraphMatcher.group();
             Component paragraph = new Paragraph(singleParagraph);
             System.out.println("paragraph " + i + " ->" + paragraph.getContent());
+            composeTextElementsWhileParsing("paragraph " + i + " ->" + paragraph.getContent());
+            textElementsWhileParsing = textElementsWhileParsing + "paragraph " + i + " ->" + paragraph.getContent() + "\n";
             paragraphComposite.addComponent(parseToSentences(paragraph));
             i++;
         }
         return paragraphComposite;
     }
+
 
     /**
      * Method divide paragraphs onto sentence.
@@ -66,6 +74,7 @@ public class ParserService {
             String singleSentence = sentenceMatcher.group();
             Component sentence = new Sentence(singleSentence);
             System.out.println("sentence " + i + " ->" + sentence.getContent());
+            composeTextElementsWhileParsing("sentence " + i + " ->" + sentence.getContent());
             sentenceComposite.addComponent(parseToWordWithPunctuation(sentence));
             i++;
         }
@@ -85,6 +94,7 @@ public class ParserService {
         while (wordAndPunctuationMatcher.find()) {
             String singleWordAndPunctuation = wordAndPunctuationMatcher.group();
             System.out.println("word with punctuation " + i + " ->" + singleWordAndPunctuation);
+            composeTextElementsWhileParsing("word with punctuation " + i + " ->" + singleWordAndPunctuation);
             wordAndPunctuationComposite = checkForPunctuationExisting(singleWordAndPunctuation, wordAndPunctuationComposite);
             i++;
         }
@@ -107,14 +117,18 @@ public class ParserService {
                 Component word = new Word(parseByWordAndPunctuationMatcher.group());
                 wordAndPunctuationComposite.addComponent(word);
                 System.out.println("word->" + parseByWordAndPunctuationMatcher.group());
+                composeTextElementsWhileParsing("word->" + parseByWordAndPunctuationMatcher.group());
             } else if (punctuationMatcher.matches()) {
                 Component punctuation = new Punctuation(parseByWordAndPunctuationMatcher.group());
                 wordAndPunctuationComposite.addComponent(punctuation);
                 System.out.println("punctuation->" + parseByWordAndPunctuationMatcher.group());
+                composeTextElementsWhileParsing("punctuation->" + parseByWordAndPunctuationMatcher.group());
             }
         }
         return wordAndPunctuationComposite;
     }
 
-
+    private void composeTextElementsWhileParsing(String s) {
+        textElementsWhileParsing = textElementsWhileParsing + s + "\n";
+    }
 }

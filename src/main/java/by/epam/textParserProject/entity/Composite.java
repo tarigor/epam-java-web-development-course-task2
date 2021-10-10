@@ -3,10 +3,16 @@ package by.epam.textParserProject.entity;
 import java.util.ArrayList;
 
 public class Composite implements Component {
+    public static String wholeParsedText;
     private final ArrayList<Component> componentsList;
 
     public Composite() {
         componentsList = new ArrayList<>();
+        wholeParsedText = "";
+    }
+
+    public String getWholeParsedText() {
+        return wholeParsedText;
     }
 
     public ArrayList<Component> getComponentsList() {

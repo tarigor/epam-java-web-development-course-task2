@@ -10,4 +10,6 @@ public interface Component {
     String getContent();
 
     Component getChild(int index);
+
+    String toString();
 }
