@@ -1,9 +1,7 @@
 package by.epam.textParserProject.controller;
 
 import by.epam.textParserProject.command.Command;
-import by.epam.textParserProject.command.Commands;
-import by.epam.textParserProject.command.factory.CommandDefiner;
-import org.apache.commons.fileupload.servlet.ServletFileUpload;
+import by.epam.textParserProject.command.factory.CommandFactory;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -26,14 +24,8 @@ public class Controller extends HttpServlet {
     }
 
     private void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String commandName;
-        if (ServletFileUpload.isMultipartContent(request)) {
-            commandName = Commands.DOWNLOAD.toString();
-        } else {
-            commandName = request.getParameter("command").toUpperCase();
-        }
-        System.out.println("command->" + commandName);
-        Command command = CommandDefiner.getInstance().selectCommand(Commands.valueOf(commandName));
+        CommandFactory commandFactory = new CommandFactory();
+        Command command = commandFactory.selectCommand(request);
         command.execute(request, response);
     }
 }

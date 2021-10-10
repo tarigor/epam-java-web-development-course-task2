@@ -1,9 +1,37 @@
 package by.epam.textParserProject.command;
 
+import by.epam.textParserProject.command.impl.*;
+
 public enum Commands {
-    DOWNLOAD,
-    PARSE,
-    SHOW_CONTENT_OF_DOWNLOADED_FILE,
-    SHOW_ELEMENTS_DETECTED_WHILE_PARSING,
-    SHOW_PARSED_TEXT;
+    DOWNLOAD {
+        {
+            this.command = new FileDownload();
+        }
+    },
+    PARSE {
+        {
+            this.command = new FileParse();
+        }
+    },
+    SHOW_CONTENT_OF_DOWNLOADED_FILE {
+        {
+            this.command = new ShowContentOfDownloadedFile();
+        }
+    },
+    SHOW_ELEMENTS_DETECTED_WHILE_PARSING {
+        {
+            this.command = new ShowElementsDetectedWhileParsing();
+        }
+    },
+    SHOW_PARSED_TEXT {
+        {
+            this.command = new ShowParsedText();
+        }
+    };
+
+    Command command;
+
+    public Command getCommand() {
+        return command;
+    }
 }

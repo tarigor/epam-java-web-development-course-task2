@@ -13,12 +13,15 @@
 #### Stack:
 - Java 11
 - maven (build tool)
+- apache tomcat 9.0.45
+- Servlet API 2.5
+- JSP API 2.1
+- commons-fileupload 1.4 from Apache
+- commons-io 2.11.0 from Apache
 
 #### Patterns applied:
-- menu routine - Builder pattern
-- menu commands - Factory pattern
-- services - Factory pattern
-- factory classes (command and service) - Singleton pattern
+- command definer of commands receiving from http -> Factory pattern
+- services -> Factory pattern
 
 
 

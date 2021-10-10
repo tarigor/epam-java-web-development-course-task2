@@ -17,8 +17,8 @@ public class FileParse extends BaseCommand implements Command {
      */
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        textFromDownloadedFile = textFileService.getFileContent();
-        instanceWithTextParsed = parserService.parseTextFromFile(textFromDownloadedFile);
+        String textFromDownloadedFile = textFileService.getFileContent();
+        parserService.parseTextFromFile(textFromDownloadedFile);
         request.getRequestDispatcher("WEB-INF/jsp/after-parsing.jsp").forward(request, response);
     }
 }
