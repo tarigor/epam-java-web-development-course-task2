@@ -2,7 +2,7 @@ package by.epam.textParserProject.entity;
 
 public class Word implements Component {
 
-    private final String content;
+    private String content;
 
     public Word(String content) {
         this.content = content;
@@ -27,6 +27,10 @@ public class Word implements Component {
     @Override
     public String getContent() {
         return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
     }
 
     @Override

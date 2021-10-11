@@ -14,8 +14,8 @@ import java.util.List;
  * Class provides methods for getting text data from file.
  */
 public class TextFileService {
-    private String fileContent;
     private final String PATH = System.getProperty("user.dir") + "/";
+    private String fileContent;
 
     public TextFileService() {
     }

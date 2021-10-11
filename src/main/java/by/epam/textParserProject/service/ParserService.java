@@ -50,7 +50,7 @@ public class ParserService {
         while (paragraphMatcher.find()) {
             String singleParagraph = paragraphMatcher.group();
             Component paragraph = new Paragraph(singleParagraph);
-            System.out.println("paragraph " + i + " ->" + paragraph.getContent());
+            // System.out.println("paragraph " + i + " ->" + paragraph.getContent());
             composeTextElementsWhileParsing("paragraph " + i + " ->" + paragraph.getContent());
             textElementsWhileParsing = textElementsWhileParsing + "paragraph " + i + " ->" + paragraph.getContent() + "\n";
             paragraphComposite.addComponent(parseToSentences(paragraph));
@@ -73,7 +73,7 @@ public class ParserService {
         while (sentenceMatcher.find()) {
             String singleSentence = sentenceMatcher.group();
             Component sentence = new Sentence(singleSentence);
-            System.out.println("sentence " + i + " ->" + sentence.getContent());
+            //System.out.println("sentence " + i + " ->" + sentence.getContent());
             composeTextElementsWhileParsing("sentence " + i + " ->" + sentence.getContent());
             sentenceComposite.addComponent(parseToWordWithPunctuation(sentence));
             i++;
@@ -93,8 +93,8 @@ public class ParserService {
         int i = 1;
         while (wordAndPunctuationMatcher.find()) {
             String singleWordAndPunctuation = wordAndPunctuationMatcher.group();
-            System.out.println("word with punctuation " + i + " ->" + singleWordAndPunctuation);
-            composeTextElementsWhileParsing("word with punctuation " + i + " ->" + singleWordAndPunctuation);
+//            System.out.println("word with punctuation " + i + " ->" + singleWordAndPunctuation);
+//            composeTextElementsWhileParsing("word with punctuation " + i + " ->" + singleWordAndPunctuation);
             wordAndPunctuationComposite = checkForPunctuationExisting(singleWordAndPunctuation, wordAndPunctuationComposite);
             i++;
         }
@@ -116,16 +116,41 @@ public class ParserService {
             if (wordMatcher.matches()) {
                 Component word = new Word(parseByWordAndPunctuationMatcher.group());
                 wordAndPunctuationComposite.addComponent(word);
-                System.out.println("word->" + parseByWordAndPunctuationMatcher.group());
+                //System.out.println("word->" + parseByWordAndPunctuationMatcher.group());
                 composeTextElementsWhileParsing("word->" + parseByWordAndPunctuationMatcher.group());
             } else if (punctuationMatcher.matches()) {
                 Component punctuation = new Punctuation(parseByWordAndPunctuationMatcher.group());
                 wordAndPunctuationComposite.addComponent(punctuation);
-                System.out.println("punctuation->" + parseByWordAndPunctuationMatcher.group());
+                //System.out.println("punctuation->" + parseByWordAndPunctuationMatcher.group());
                 composeTextElementsWhileParsing("punctuation->" + parseByWordAndPunctuationMatcher.group());
             }
         }
         return wordAndPunctuationComposite;
+    }
+
+    public Composite swapWords(Composite composite) {
+        for (int i = 0; i < composite.getComponentsList().size(); i++) {
+            for (Component component : ((Composite) composite.getChild(i)).getComponentsList()) {
+                int k = 0;
+                String lastWord;
+                String firstWord = component.getChild(0).toString();
+                if (component.getChild(((Composite) component).getComponentsList().size() - 2).getClass().getName().contains("Word")) {
+                    lastWord = component.getChild(((Composite) component).getComponentsList().size() - 2).toString();
+                } else {
+                    while (true) {
+                        lastWord = component.getChild(((Composite) component).getComponentsList().size() - (2 + k)).toString();
+                        if (component.getChild(((Composite) component).getComponentsList().size() - (2 + k)).getClass().getName().contains("Word")) {
+                            break;
+                        }
+                        k++;
+                    }
+                }
+                ((Word) ((Composite) component).getComponentsList().get(0)).setContent(lastWord);
+                ((Word) ((Composite) component).getComponentsList().get(((Composite) component).getComponentsList().size() - (2 + k))).setContent(firstWord);
+                System.out.println("has been swapped--> " + firstWord.trim() + " and " + lastWord.trim());
+            }
+        }
+        return composite;
     }
 
     private void composeTextElementsWhileParsing(String s) {

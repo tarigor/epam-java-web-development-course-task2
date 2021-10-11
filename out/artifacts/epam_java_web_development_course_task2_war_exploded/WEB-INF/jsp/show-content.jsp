@@ -32,7 +32,7 @@
 	</div>
 </header>
 <section class="u-clearfix u-section-1" id="sec-b2b0">
-	<div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+	<div class="u-clearfix u-sheet u-sheet-1">
 		<p class="u-align-left u-text u-text-1">&nbsp; Создать программу обработки фрагмента
 			текста учебника по программированию с использованием элементов, например:
 			Символ, Слово, Предложение, Текст, Абзац, Листинг, Лексема, Знак препинания и
@@ -46,6 +46,10 @@
 			Для демонстрации работы приложения использовать unit тесты.
 			Использовать logging.
 			Использовать библиотеки сборки.</p>
+		<h6 class="u-align-left u-text u-text-2">Additional task:</h6>
+		<p class="u-align-left u-text u-text-3"> &nbsp;5.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <!--[endif]-->В
+			каждом предложении текста поменять местами первое слово с последним, не изменяя
+			длины предложения.</p>
 	</div>
 </section>
 <section class="u-clearfix u-grey-25 u-section-2" id="sec-b717">
@@ -53,17 +57,22 @@
 		<form method="POST" action="${pageContext.request.contextPath}/Controller">
 			<input type="hidden" name="command" value="SHOW_ELEMENTS_DETECTED_WHILE_PARSING"/>
 			<input class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-1" type="submit"
-			       value="1. Show Elements Detected While Parsing"/>
+			       value="Show Elements Detected While Parsing"/>
 		</form>
 		<form method="POST" action="${pageContext.request.contextPath}/Controller">
 			<input type="hidden" name="command" value="SHOW_CONTENT_OF_DOWNLOADED_FILE"/>
 			<input class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-2" type="submit"
-			       value="2. Show Content Of downloaded File"/>
+			       value="Show Content Of Downloaded File"/>
 		</form>
 		<form method="POST" action="${pageContext.request.contextPath}/Controller">
 			<input type="hidden" name="command" value="SHOW_PARSED_TEXT"/>
 			<input class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-3" type="submit"
-			       value="3. Show Parsed Text"/>
+			       value="Show Parsed Text"/>
+		</form>
+		<form method="POST" action="${pageContext.request.contextPath}/Controller">
+			<input type="hidden" name="command" value="SWAP_WORDS"/>
+			<input class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-4" type="submit"
+			       value="Swap The First Word WIth The Last"/>
 		</form>
 	</div>
 </section>

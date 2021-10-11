@@ -8,8 +8,18 @@
     margin: 24px 0 0;
 }
 
+.u-section-1 .u-text-2 {
+    margin: 9px 0 0;
+}
+
+.u-section-1 .u-text-3 {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+    animation-duration: 1000ms;
+    margin: 9px 0 0;
+}
+
 .u-section-1 .u-btn-1 {
-    margin: 45px auto 60px 481px;
+    margin: 77px auto 60px 481px;
 }
 
 @media (max-width: 1199px) {

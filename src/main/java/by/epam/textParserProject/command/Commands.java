@@ -27,6 +27,11 @@ public enum Commands {
         {
             this.command = new ShowParsedText();
         }
+    },
+    SWAP_WORDS {
+        {
+            this.command = new SwapWords();
+        }
     };
 
     Command command;

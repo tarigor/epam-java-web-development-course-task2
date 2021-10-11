@@ -11,6 +11,8 @@ import java.io.IOException;
 public class FileDownload extends BaseCommand implements Command {
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+
         String textFromDownloadedFile = textFileService.uploadFile(request);
         request.setAttribute("fullText", textFromDownloadedFile);
         request.getRequestDispatcher("WEB-INF/jsp/after-download.jsp").forward(request, response);

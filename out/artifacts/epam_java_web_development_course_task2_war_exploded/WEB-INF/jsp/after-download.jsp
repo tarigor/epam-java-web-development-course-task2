@@ -32,7 +32,7 @@
 	</div>
 </header>
 <section class="u-clearfix u-section-1" id="sec-b2b0">
-	<div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+	<div class="u-clearfix u-sheet u-sheet-1">
 		<p class="u-align-left u-text u-text-1">&nbsp; Создать программу обработки фрагмента
 			текста учебника по программированию с использованием элементов, например:
 			Символ, Слово, Предложение, Текст, Абзац, Листинг, Лексема, Знак препинания и
@@ -46,6 +46,10 @@
 			Для демонстрации работы приложения использовать unit тесты.
 			Использовать logging.
 			Использовать библиотеки сборки.</p>
+		<h6 class="u-align-left u-text u-text-2">Additional task:</h6>
+		<p class="u-align-left u-text u-text-3"> &nbsp;5.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <!--[endif]-->В
+			каждом предложении текста поменять местами первое слово с последним, не изменяя
+			длины предложения.</p>
 	</div>
 </section>
 <section class="u-clearfix u-grey-25 u-section-2" id="sec-b717">

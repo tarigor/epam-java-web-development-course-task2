@@ -1,11 +1,21 @@
 .u-section-1 .u-sheet-1 {
-    min-height: 173px;
+    min-height: 239px;
 }
 
 .u-section-1 .u-text-1 {
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
     animation-duration: 1000ms;
-    margin: 24px 0;
+    margin: 24px 0 0;
+}
+
+.u-section-1 .u-text-2 {
+    margin: 8px 0 0;
+}
+
+.u-section-1 .u-text-3 {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+    animation-duration: 1000ms;
+    margin: 9px 0 27px;
 }
 
 .u-section-2 {

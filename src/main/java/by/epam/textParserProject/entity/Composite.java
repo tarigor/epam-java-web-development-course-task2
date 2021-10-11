@@ -38,12 +38,14 @@ public class Composite implements Component {
 
     @Override
     public String getContent() {
-        throw new UnsupportedOperationException();
+//        throw new UnsupportedOperationException();
+        return "composite";
     }
 
     @Override
     public Component getChild(int index) {
         return componentsList.get(index);
     }
+
 
 }
