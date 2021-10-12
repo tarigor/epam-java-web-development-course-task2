@@ -5,7 +5,7 @@ package by.epam.textparserproject.constant;
  */
 public enum ParserExpression {
     PARAGRAPH("(\\s\\n|^).*?(?=\\n|$)"),
-    SENTENCE("[а-яА-Яa-zA-Z][^\\.]*[\\.!?:;]"),
+    SENTENCE("[а-яА-Яa-zA-Z][^\\.!?:;]*[\\.!?:;]"),
     WORD_WITH_PUNCTUATION_DIVIDED_BY_SPACE("[А-Яа-яa-zA-Z][^\\s]*"),
     SPLIT_WORD_AND_PUNCTUATION("[а-яА-Яa-zA-Z][^\\s\\.,:;?!()]*|\\W"),
     WORD("[а-яА-Яa-zA-Z][^\\s\\.,:;?!()]*"),

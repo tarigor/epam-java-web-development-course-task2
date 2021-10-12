@@ -16,6 +16,7 @@ import java.util.List;
  */
 public class TextFileService {
     private final Logger logger = Logger.getLogger(TextFileService.class);
+    //file storing in bin folder of tomcat folder installation
     private final String PATH = System.getProperty("user.dir") + "/";
     private String fileContent;
 

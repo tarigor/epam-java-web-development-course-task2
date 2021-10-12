@@ -2,18 +2,11 @@ package by.epam.textparserproject.controller;
 
 import by.epam.textparserproject.command.Command;
 import by.epam.textparserproject.command.factory.CommandFactory;
-import by.epam.textparserproject.service.ParserService;
-import org.apache.log4j.BasicConfigurator;
-import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
 
-import javax.servlet.ServletConfig;
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.File;
 import java.io.IOException;
 
 /**

@@ -18,6 +18,10 @@ public class Composite implements Component {
         return wholeParsedText;
     }
 
+    public static void setWholeParsedText(String wholeParsedText) {
+        Composite.wholeParsedText = wholeParsedText;
+    }
+
     public ArrayList<Component> getComponentsList() {
         return componentsList;
     }

@@ -18,8 +18,7 @@ public class Paragraph implements Component {
 
     @Override
     public void parse() {
-        System.out.println("     " + content + " ");
-        Composite.wholeParsedText = Composite.wholeParsedText + "\n" + "    " + content + " ";
+        Composite.wholeParsedText = Composite.wholeParsedText + "\n" + "   " + content + "";
     }
 
     @Override

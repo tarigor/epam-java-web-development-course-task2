@@ -17,7 +17,7 @@ public class SwapWords extends BaseCommand implements Command {
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Composite composite = parserService.getParagraphComposite();
-        parserService.swapWords(composite);
+        parserService.swapWords(composite).parse();
         String content = composite.getWholeParsedText();
         request.setAttribute("content", content);
         request.setAttribute("description", "Parsed Text After Words Swapped");

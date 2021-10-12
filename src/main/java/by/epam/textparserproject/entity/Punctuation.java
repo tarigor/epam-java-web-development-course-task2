@@ -13,8 +13,7 @@ public class Punctuation implements Component {
 
     @Override
     public void parse() {
-        System.out.print(content + " ");
-        Composite.wholeParsedText = Composite.wholeParsedText + content + " ";
+        Composite.wholeParsedText = Composite.wholeParsedText + content + "";
     }
 
     @Override

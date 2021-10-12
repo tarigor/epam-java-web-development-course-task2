@@ -22,6 +22,8 @@ File to be parsed is located in _`resources`_ folder -> text.txt
 - JSP API 2.1
 - commons-fileupload 1.4 from Apache
 - commons-io 2.11.0 from Apache
+- log4j (logger)
+- junit (testing)
 
 #### Patterns applied:
 - command definer of commands receiving from http -> Factory pattern

@@ -20,9 +20,8 @@ public class ParserService {
     private final String SPLIT_WORD_AND_PUNCTUATION = ParserExpression.SPLIT_WORD_AND_PUNCTUATION.getParseExpression();
     private final String WORD = ParserExpression.WORD.getParseExpression();
     private final String PUNCTUATION = ParserExpression.PUNCTUATION.getParseExpression();
-
-    private final Composite paragraphComposite;
     private final StringBuilder textBuilder;
+    private Composite paragraphComposite;
     private String textElementsWhileParsing = "";
 
     public ParserService() {
@@ -36,6 +35,10 @@ public class ParserService {
 
     public Composite getParagraphComposite() {
         return paragraphComposite;
+    }
+
+    private void setParagraphComposite(Composite paragraphComposite) {
+        this.paragraphComposite = paragraphComposite;
     }
 
     public Matcher doMatching(String parserExpression, String text) {
@@ -135,16 +138,17 @@ public class ParserService {
      * @return modified Composite instance in which the first word of each sentence swapped with the last word of sentence.
      */
     public Composite swapWords(Composite composite) {
+        Composite.setWholeParsedText("");
         for (int i = 0; i < composite.getComponentsList().size(); i++) {
             for (Component component : ((Composite) composite.getChild(i)).getComponentsList()) {
                 int k = 0;
                 String lastWord;
-                String firstWord = component.getChild(0).toString();
+                String firstWord = component.getChild(0).toString().trim();
                 if (component.getChild(((Composite) component).getComponentsList().size() - 2).getClass().getName().contains("Word")) {
-                    lastWord = component.getChild(((Composite) component).getComponentsList().size() - 2).toString();
+                    lastWord = component.getChild(((Composite) component).getComponentsList().size() - 2).toString().trim();
                 } else {
                     while (true) {
-                        lastWord = component.getChild(((Composite) component).getComponentsList().size() - (2 + k)).toString();
+                        lastWord = component.getChild(((Composite) component).getComponentsList().size() - (2 + k)).toString().trim();
                         if (component.getChild(((Composite) component).getComponentsList().size() - (2 + k)).getClass().getName().contains("Word")) {
                             break;
                         }
@@ -156,7 +160,8 @@ public class ParserService {
                 logger.info(textBuilder.append("has been swapped -> ").append(firstWord.trim()).append(" and ").append(lastWord.trim()).append("\n"));
             }
         }
-        return composite;
+        setParagraphComposite(composite);
+        return getParagraphComposite();
     }
 
     /**

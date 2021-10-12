@@ -13,7 +13,6 @@ public class Word implements Component {
 
     @Override
     public void parse() {
-        System.out.print(" " + content);
         Composite.wholeParsedText = Composite.wholeParsedText + " " + content;
     }
 
