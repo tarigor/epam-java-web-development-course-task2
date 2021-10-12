@@ -10,6 +10,8 @@
 Использовать logging.
 Использовать библиотеки сборки.
 
+Additional task:
+- В каждом предложении текста поменять местами первое слово с последним, не изменяя длины предложения.
 ### Attachment
 
 File to be parsed is located in _`resources`_ folder -> text.txt

@@ -113,6 +113,7 @@ public class ParserService {
      * @param wordAndPunctuationComposite paragraph Composite instance.
      * @return Composite instance consists words and punctuations separately.
      */
+
     private Composite checkForPunctuationExisting(String singleWordAndPunctuation, Composite wordAndPunctuationComposite) {
         Matcher parseByWordAndPunctuationMatcher = doMatching(SPLIT_WORD_AND_PUNCTUATION, singleWordAndPunctuation);
         while (parseByWordAndPunctuationMatcher.find()) {
