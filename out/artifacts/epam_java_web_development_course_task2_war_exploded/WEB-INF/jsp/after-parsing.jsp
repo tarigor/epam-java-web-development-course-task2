@@ -72,7 +72,7 @@
 		<form method="POST" action="${pageContext.request.contextPath}/Controller">
 			<input type="hidden" name="command" value="SWAP_WORDS"/>
 			<input class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-4" type="submit"
-			       value="Swap The First Word WIth The Last"/>
+			       value="Swap The First Word With The Last"/>
 		</form>
 	</div>
 </section>
