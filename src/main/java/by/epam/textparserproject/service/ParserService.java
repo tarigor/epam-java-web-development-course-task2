@@ -9,6 +9,7 @@ import java.util.regex.Pattern;
 
 /**
  * Class provides the methods executing a business logic of the parsing actions.
+ * @author Igor Taren
  */
 public class ParserService {
 

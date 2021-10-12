@@ -11,6 +11,7 @@ import java.io.IOException;
 /**
  * Class provides a method redirects to a page with listing of the parsed text with details of the parsed
  * elements (paragraphs,sentences, words, punctuations).
+ * @author Igor Taren
  */
 public class ShowElementsDetectedWhileParsing extends BaseCommand implements Command {
     @Override

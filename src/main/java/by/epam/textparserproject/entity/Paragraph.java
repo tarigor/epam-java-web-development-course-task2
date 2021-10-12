@@ -2,6 +2,7 @@ package by.epam.textparserproject.entity;
 
 /**
  * Class implements the base component and encapsulates a leaf element - paragraph.
+ * @author Igor Taren
  */
 public class Paragraph implements Component {
 

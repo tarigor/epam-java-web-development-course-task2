@@ -11,6 +11,7 @@ import java.io.IOException;
 /**
  * Class provides a method which is parsing a page content onto an object using Composite pattern and redirecting onto
  * a page with a text service dialog.
+ * @author Igor Taren
  */
 public class FileParse extends BaseCommand implements Command {
     @Override

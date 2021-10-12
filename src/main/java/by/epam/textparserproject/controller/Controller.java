@@ -12,6 +12,7 @@ import java.io.IOException;
 /**
  * Class provides front controller of Web application which is handlers the http requests from the client and
  * processes this request.
+ * @author Igor Taren
  */
 public class Controller extends HttpServlet {
     @Override

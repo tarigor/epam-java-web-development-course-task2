@@ -11,6 +11,8 @@ import java.io.IOException;
 /**
  * Class provides a method executes command of the file download from web page dialog, storing its content in String data,
  * shown content of file on the web page.
+ *
+ * @author Igor Taren
  */
 public class FileDownload extends BaseCommand implements Command {
     @Override

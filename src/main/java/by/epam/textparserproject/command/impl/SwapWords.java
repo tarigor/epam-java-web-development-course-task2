@@ -12,6 +12,7 @@ import java.io.IOException;
 /**
  * Class provides a method which is calls a services method which swaps the first word of each sentence of the text
  * with the last one, then redirects onto a page with listing of the modified text.
+ * @author Igor Taren
  */
 public class SwapWords extends BaseCommand implements Command {
     @Override

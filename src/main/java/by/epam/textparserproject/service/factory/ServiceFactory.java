@@ -5,6 +5,7 @@ import by.epam.textparserproject.service.TextFileService;
 
 /**
  * Factory class of different services. Provides methods for getting a required instance of service classes.
+ * @author Igor Taren
  */
 public class ServiceFactory {
     private static final ServiceFactory serviceFactory = new ServiceFactory();

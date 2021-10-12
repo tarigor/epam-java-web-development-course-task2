@@ -7,6 +7,7 @@ import java.io.IOException;
 
 /**
  * Common interface of the command classes provides a contract to implements a method handlers the HTTP request.
+ * @author Igor Taren
  */
 public interface Command {
     void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException;

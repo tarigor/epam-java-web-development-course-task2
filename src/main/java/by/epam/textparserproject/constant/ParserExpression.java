@@ -2,6 +2,7 @@ package by.epam.textparserproject.constant;
 
 /**
  * Consist constants of regex expressions.
+ * @author Igor Taren
  */
 public enum ParserExpression {
     PARAGRAPH("(\\s\\n|^).*?(?=\\n|$)"),

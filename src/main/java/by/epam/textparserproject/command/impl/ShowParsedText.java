@@ -11,6 +11,7 @@ import java.io.IOException;
 
 /**
  * Class provides a method redirects to a page with listing of the the parsed text.
+ * @author Igor Taren
  */
 public class ShowParsedText extends BaseCommand implements Command {
     @Override

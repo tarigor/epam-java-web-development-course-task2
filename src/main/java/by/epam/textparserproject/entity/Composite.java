@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 /**
  * Class implements the base component methods and defines the child related operations.
+ * @author Igor Taren
  */
 public class Composite implements Component {
     public static String wholeParsedText;

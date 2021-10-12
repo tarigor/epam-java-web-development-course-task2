@@ -10,6 +10,7 @@ import java.io.IOException;
 
 /**
  * Class provides a method which redirects to a page with listing of the content of the downloaded file.
+ * @author Igor Taren
  */
 public class ShowContentOfDownloadedFile extends BaseCommand implements Command {
     @Override

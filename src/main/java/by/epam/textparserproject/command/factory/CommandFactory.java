@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 
 /**
  * Class provides a method for define a command based on parameter "command" received via http from jsp page.
+ * @author Igor Taren
  */
 public class CommandFactory {
     private static Logger logger = Logger.getLogger(CommandFactory.class);

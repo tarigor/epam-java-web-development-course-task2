@@ -4,6 +4,7 @@ import by.epam.textparserproject.command.impl.*;
 
 /**
  * ENUM provides a constant of the HTTP command. Provides the definition of the command based on Factory command pattern.
+ * @author Igor Taren
  */
 public enum Commands {
     DOWNLOAD {

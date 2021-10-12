@@ -13,6 +13,7 @@ import java.util.List;
 
 /**
  * Class provides methods for getting text data from file.
+ * @author Igor Taren
  */
 public class TextFileService {
     private final Logger logger = Logger.getLogger(TextFileService.class);

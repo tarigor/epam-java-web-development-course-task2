@@ -6,6 +6,7 @@ import by.epam.textparserproject.service.factory.ServiceFactory;
 
 /**
  * Common abstract class of whole command classes which provides instances of the services classes.
+ * @author Igor Taren
  */
 public abstract class BaseCommand {
     protected ParserService parserService = ServiceFactory.getInstance().getParserService();
